@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoPen | Home</title>
+    <!-- CSS LINKS  -->
+    <link rel="stylesheet" href="./Main-UI/Styles/home.css">
+    <link rel="stylesheet" href="./Main-UI/Styles/base.css">
+    <link rel="stylesheet" href="./Main-UI/Styles/animations.css">
+</head>
+
+<body class="light">
+    <!-- Start Menu  -->
+    <menu>
+        <div class="opt" data-aos="fade-down"><a href="#">Home</a></div>
+        <div class="opt" data-aos="fade-up"><a href="./Main-UI/pages/contact.html">Contact</a></div>
+        <div class="opt" data-aos="fade-down"><a href="./Main-UI/pages/articles.html">Articles</a></div>
+        <div class="opt" data-aos="fade-up"><a href="./Main-UI/pages/signup.html">Register</a></div>
+        <div class="opt" data-aos="fade-up"><button id="change-theme-btn"><i class="bi bi-moon"></i></button></div>
+    </menu>
+    <!-- finished  -->
+    <div style="position: relative;z-index: 2;">
+        <h1 class="title"></h1>
+        <button class="btn"><a href="./Main-UI/pages/dashboard.html">Get Started</a></button>
+
+
+        <div class="web-data-container">
+            <div class="data">
+                <!-- this number should be change when i created django file -->
+                <p class="data-num" data-num="1234" data-aos="fade-right"></p>
+                <p class="data-lable" data-aos="fade-left">users</p>
+            </div>
+            <div class="data">
+                <p class="data-num" data-num="134" data-aos="fade-right"></p>
+                <p class="data-lable" data-aos="fade-left">articles</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- animation  -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- finished -->
+
+    <!-- JS  -->
+    <script type="module" src="./Main-UI/Js/theme.js"></script>
+    <script type="module" src="./Main-UI/Js/loader.js"></script>
+    <script type="module" src="./Main-UI/Js/loadData.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+        new TypeIt(".title", {
+            strings: "EchoPen Is a Website For Write Articles And Read Articles ",
+            speed: 60,
+        }).go();
+    </script>
+</body>
+
+</html>

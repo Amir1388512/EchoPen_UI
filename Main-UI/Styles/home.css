@@ -1,0 +1,57 @@
+@import url('./var.css');
+
+
+.title {
+    width: 40%;
+    text-align: center;
+    margin: 10% auto 3%;
+    font-size: 2em;
+    color: var(--txt-color);
+    font-weight: 600;
+}
+
+/* resposive  */
+@media (max-width: 768px) {
+    .title {
+        margin: 30% auto 10%;
+        width: 80%;
+        font-size: 1.5em;
+    }
+
+    .web-data-container {
+        margin: 30% auto;
+    }
+}
+
+/* resposive  */
+@media (max-width: 576px) {
+    .title {
+        margin: 30% auto 10%;
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    .web-data-container {
+        margin: 30% auto;
+    }
+
+}
+
+
+.web-data-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10% auto;
+}
+
+.data-num {
+    font-size: 1.3em;
+}
+
+.data-lable {
+    color: var(--primary-color);
+    text-shadow: 0 0 3px var(--primary-color);
+    font-size: 0.9em;
+}
+

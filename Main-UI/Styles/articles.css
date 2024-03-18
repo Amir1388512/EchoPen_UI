@@ -1,0 +1,163 @@
+
+.sort-container {
+    width: 50%;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+}
+
+body.light .sort-container {
+    background: #ffffffc9;
+    box-shadow: 0px 0px 4px #fff;
+}
+
+body.dark .sort-container {
+    background: #28293dbd;
+    box-shadow: 0px 0px 4px #111;
+
+}
+
+
+.sort-item {
+    margin: 10px 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+
+.sort-item>a {
+    color: #868686;
+    font-weight: 300;
+    transition: all ease 0.3s;
+}
+
+
+.sort-item:hover.sort-item>a {
+    color: var(--txt-color);
+    font-weight: 400;
+}
+
+body.dark .sort-item:hover {
+    background: #32334d;
+}
+
+body.light .sort-item:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 768px) {
+    .sort-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .sort-container {
+        width: 60%;
+    }
+}
+
+
+.articles-container {
+    width: 100%;
+    margin: 3% auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.article {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+body.dark .article {
+    background: #28293dd5;
+    box-shadow: 0px 0px 3px #32334d;
+}
+
+body.light .article{
+    background: #ffffffdb;
+    box-shadow: 0px 0px 3px #fff;
+}
+
+.article>img{
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+
+.article>img:hover{
+    scale: 1.03;
+}
+
+.article>h2{
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.discription{
+    padding: 5px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #909090;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.hr{
+    width: 55%;
+    height: 0.5px;
+    margin:5px auto;
+    border-radius: 10px;
+}
+
+body.dark .hr{
+    background: #464545;
+}
+
+body.light .hr{
+    background: #d5d5d5;
+}
+
+.detail{
+    width: 90%;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail>div>p,
+.detail>div>i{
+    font-weight: 400;
+    font-size: 0.76em;
+    margin: 2px;
+}
+
+.detail>div{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+body.dark .detail{
+    background: #32334d;
+}
+
+body.light .detail{
+    background: #f3f4f6;
+}
