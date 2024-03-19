@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoPen | Create Article</title>
+
+
+    <link rel="stylesheet" href="../Styles/loader.css">
+    <link rel="stylesheet" href="../Styles/base.css">
+    <link rel="stylesheet" href="../Styles/animations.css">
+    <link rel="stylesheet" href="../Styles/forms.css">
+</head>
+
+<body class="light">
+
+    <!-- Start Menu  -->
+    <menu>
+        <div class="opt"><a href="../../index.html">Home</a></div>
+        <div class="opt"><a href="./contact.html">Contact</a></div>
+        <div class="opt"><a href="#">Articles</a></div>
+        <div class="opt"><a href="./signup.html">Register</a></div>
+        <div class="opt"><button id="change-theme-btn"><i class="bi bi-moon"></i></button></div>
+    </menu>
+    <!-- finished  -->
+    <div class="loader-container1"></div>
+    <div class="loader-container2"></div>
+
+
+    <div class="form-container"> 
+        <h2>
+            Create Article 
+        </h2>
+        <p>we use markdown what is <a href="https://www.markdownguide.org/basic-syntax/">MarkDown</a></p>
+        <form action="#">
+            <input type="text" name="title" placeholder="title...">
+            <textarea name="content" style="resize: none;" minlength="30" maxlength="500"
+                placeholder="Type your content here..."></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+
+    <!-- animation  -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- finished -->
+
+
+    <script src="../../tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#editor',
+            plugins: 'advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | image media | link unlink anchor | table | code | fullscreen',
+            content_css: "dark", // Path to your dark theme CSS file
+            skin: 'oxide-dark',
+        });
+    </script>
+    <script type="module" src="../Js/theme.js"></script>
+    <script type="module" src="../Js/loader.js"></script>
+</body>
+
+</html>
