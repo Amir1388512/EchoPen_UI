@@ -9,8 +9,26 @@
 
     <link rel="stylesheet" href="../Styles/menu.css">
     <link rel="stylesheet" href="../Styles/base.css">
+    <link rel="stylesheet" href="../Styles/articles.css">
     <link rel="stylesheet" href="../Styles/animations.css">
+    <link rel="stylesheet" href="../Styles/dashboard.css">
+    <link rel="stylesheet" href="../Styles/loader.css">
+
 </head>
+<style>
+    /* CSS for responsiveness */
+
+
+    .chart-container>div {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .chart-container>div {
+            width: 45%;
+        }
+    }
+</style>
 
 <body class="light">
     <!-- Start Menu  -->
@@ -23,6 +41,108 @@
     </menu>
     <!-- finished  -->
 
+
+    <div class="dashboard-container">
+
+        <!-- loader moved inside dashboard-container -->
+        <div class="loader-container1"></div>
+        <div class="loader-container2"></div>
+
+        <div class="data-container">
+            <div class="data">
+                <div>
+                    <h3>Articles</h3>
+                    <div class="icon-container">
+                        <i class="bi bi-postcard"></i>
+                    </div>
+                </div>
+                <h3>56</h3>
+            </div>
+            <div class="data">
+                <div>
+                    <h3>Views</h3>
+                    <div class="icon-container">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                </div>
+                <h3>350k</h3>
+            </div>
+            <div class="data">
+                <div>
+                    <h3>Pending</h3>
+                    <div class="icon-container">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </div>
+                </div>
+                <h3>4</h3>
+            </div>
+        </div>
+
+
+        <h2 style="font-size: 2em;">
+            <span style="color: #2f66ee;">Your</span> Articles
+        </h2>
+        <button class="btn" style="margin-top: 3%;"><a href="#">Add Article</a></button>
+        <button class="btn" style="margin-top: 3%; background:#a83422;box-shadow: 0 0 3px #a83422;"><a href="#">Log
+                Out</a></button>
+
+        <div class="articles-container">
+            <!-- article  -->
+            <div class="article">
+                <img src="../media/jupiter.jpg" width="300" height="200"
+                    style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <h2>
+                    10 Facts about jupiter that you shold know
+                </h2>
+                <div class="hr"></div>
+                <div class="discription">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident minima debitis nemo numquam
+                        incidunt odit nobis! Voluptate quibusdam nihil recusandae quo est itaque numquam nisi quas,
+                        velit natus ipsum excepturi.
+                    </p>
+                </div>
+                <div class="hr"></div>
+                <div class="detail">
+                    <div>
+                        <i class="bi bi-eye"></i>
+                        <p>121k</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-heart"></i>
+                        <p>1k</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-calendar"></i>
+                        <p>1402/2/12</p>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-chat-left-dots"></i>
+                        <p>50</p>
+                    </div>
+
+                </div>
+                <div class="btn-container">
+                    <button class="btn" style="background-color: #bf9f2a; box-shadow: 0 0 3px #bf9f2a;"><a
+                            href="#">Edit</a></button>
+                    <button class="btn" style="background-color: #a83422; box-shadow: 0 0 3px #a83422;"><a
+                            href="#">Delete</a></button>
+                </div>
+            </div>
+        </div>
+        <h2 style="font-size: 2em;">
+            Articles <span style="color: #2f66ee;">Analytics</span>
+        </h2>
+        <div class="chart-container">
+            <div>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
 
     <!-- animation  -->
     <div class="area">
@@ -40,7 +160,10 @@
     </div>
     <!-- finished -->
     <!-- JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="../Js/theme.js"></script>
+    <script type="module" src="../Js/loader.js"></script>
+    <script type="module" src="../Js/chart.js"></script>
 </body>
 
 </html>

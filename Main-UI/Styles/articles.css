@@ -76,7 +76,7 @@ body.light .sort-item:hover {
 
 .article {
     width: 300px;
-    height: 450px;
+    height: auto;
     overflow: hidden;
     border-radius: 30px;
     text-align: center;
